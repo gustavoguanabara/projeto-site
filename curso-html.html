@@ -1,24 +1,157 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de HTML</title>
-    <link rel="stylesheet" href="estilos/style.css">
+    <title>Meu amor, pra você ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffebee, #f8bbd0, #fce4ec);
+            font-family: 'Playfair Display', serif;
+            color: #4a2c2c;
+            min-height: 100vh;
+        }
+        
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+            background: rgba(255,255,255,0.95);
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.2rem;
+            margin: 0;
+            color: #c2185b;
+        }
+        
+        .subtitle {
+            font-size: 1.6rem;
+            color: #6d4c41;
+            margin-top: 10px;
+        }
+        
+        .album {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .photo-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(194,24,91,0.2);
+            transition: all 0.4s;
+        }
+        
+        .photo-card:hover {
+            transform: scale(1.06) rotate(2deg);
+        }
+        
+        .photo-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+        
+        .caption {
+            padding: 18px;
+            text-align: center;
+            font-size: 1.15rem;
+            color: #c2185b;
+        }
+        
+        .message {
+            max-width: 800px;
+            margin: 60px auto;
+            background: white;
+            padding: 50px 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            line-height: 1.9;
+            font-size: 1.35rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: #e91e63;
+        }
+        
+        .heart { color: #e91e63; font-size: 1.5rem; }
+    </style>
 </head>
 <body>
-    <main>
-        <header>
-            <h1>Curso de HTML5 e CSS3</h1>
-        </header>
-        <article>
-            <p>A <abbr title="HyperText Markup Language">HTML</abbr> é uma linguagem de marcação para a criação de sites. Atualmente na versão 5, ela usa a semântica dos elementos para criar o conteúdo de uma página Web. Com as <abbr title="Cascading Style Sheets">CSS</abbr>, criamos as configurações visuais que um site vai ter.</p>
+    <header>
+        <h1>Para você, meu amor</h1>
+        <p class="subtitle">Cada foto é um pedaço do meu coração ❤️</p>
+    </header>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/riSVzwlSnhw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="album">
+        <div class="photo-card"><img src="/home/workdir/attachments/75514.jpg" alt="Foto 1"><div class="caption">Nosso jeitinho de amar 😘</div></div>
+        <div class="photo-card"><img src="/home/workdir/attachments/75512.jpg" alt="Foto 2"><div class="caption">Você me deixa bobo todo dia</div></div>
+        <div class="photo-card"><img src="/home/workdir/attachments/75521.jpg" alt="Foto 3"><div class="caption">Esse sorriso derrete tudo</div></div>
+        <div class="photo-card"><img src="/home/workdir/attachments/75526.jpg" alt="Foto 4"><div class="caption">Olhar de quem já sabe que é pra sempre</div></div>
+        <div class="photo-card"><img src="/home/workdir/attachments/75502.jpg" alt="Foto 5"><div class="caption">Melhor dupla do mundo</div></div>
+        <div class="photo-card"><img src="/home/workdir/attachments/75505.jpg" alt="Foto 6"><div class="caption">Abraço que eu nunca quero soltar</div></div>
+        <div class="photo-card"><img src="/home/workdir/attachments/75507.jpg" alt="Foto 7"><div class="caption">Carinha de quem te ama demais</div></div>
+        <div class="photo-card"><img src="/home/workdir/attachments/75500.jpg" alt="Foto 8"><div class="caption">Meu lugar favorito é do seu lado</div></div>
+    </div>
 
-            <a href="index.html"><img src="imagens/btn-back.png" alt="Voltar"></a>
-            
-        </article>
-    </main>
+    <div class="message">
+        <p>Meu amor,</p>
+        <p>Não existe lugar melhor que perto de você. Cada momento ao seu lado vira a melhor parte do meu dia. Obrigado por ser minha paz, minha bagunça, meu sorriso e meu futuro.</p>
+        <p>Eu te amo muito mais do que consigo explicar.</p>
+        <p>Com todo o meu coração,<br><strong>Seu namorado ❤️</strong></p>
+    </div>
+
+    <footer>
+        Pra sempre nós dois • ∞
+    </footer>
+
+    <!-- Música: Lisboa - Ana Vitória -->
+    <audio id="music" autoplay loop style="display:none;">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"> <!-- Substitua pelo link real da música se quiser -->
+    </audio>
+
+    <script>
+        // Toca a música automaticamente
+        const audio = document.getElementById('music');
+        audio.volume = 0.6;
+        
+        // Botão flutuante de música (opcional)
+        const btn = document.createElement('button');
+        btn.innerHTML = '🎵 Pausar / Tocar';
+        btn.style.position = 'fixed';
+        btn.style.bottom = '20px';
+        btn.style.right = '20px';
+        btn.style.padding = '12px 20px';
+        btn.style.background = '#e91e63';
+        btn.style.color = 'white';
+        btn.style.border = 'none';
+        btn.style.borderRadius = '50px';
+        btn.style.fontSize = '1rem';
+        btn.style.cursor = 'pointer';
+        btn.style.zIndex = '100';
+        document.body.appendChild(btn);
+        
+        btn.addEventListener('click', () => {
+            if (audio.paused) audio.play();
+            else audio.pause();
+        });
+        
+        console.log("%cFeito com muito amor pra ela ❤️", "color:#e91e63; font-size:18px");
+    </script>
 </body>
 </html>
